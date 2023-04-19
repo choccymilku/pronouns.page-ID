@@ -5,9 +5,10 @@
     <title>Pronouns API Test</title>  
   </head>
   <body>
-    <label for="name-input">Enter a name:</label>
+<h1>this is made to work with the "custom-modal" repo, but if you're feeling brave, you can figure out how apis work yourself, (I'll include more "ways to get stuff" for this website)</h1>
+    <label for="name-input">Enter an username:</label>
     <input type="text" id="name-input" name="name" onkeypress="handleKeypress(event)">
-    <button onclick="fetchPronouns()">Get Pronouns</button>
+    <button onclick="fetchPronouns()">Get user ID</button>
     <button id="copy-id" onclick="copyValue()">Copy Value</button>
     <div id="pronouns-container"></div>
     <div id="message"></div>
@@ -22,7 +23,7 @@
 		  const pronounsContainer = document.getElementById('pronouns-container');
 		  const errorContainer = document.getElementById('error');
 		  if (response.ok) {
-			pronounsContainer.textContent = `ID: ${data.id}`;
+			pronounsContainer.textContent = `user for` ${name} `ID: ${data.id}`;
 			errorContainer.textContent = '';
 			document.getElementById('copy-id').disabled = false;
 		  } else {
